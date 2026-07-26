@@ -1,1 +1,95 @@
+/* ===== GENERAL ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f5f5;
+  color:#333;
+}
+
+/* ===== HEADER ===== */
+
+header{
+  background:#0b6b3a;
+  color:#fff;
+  padding:15px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.container{
+  width:90%;
+  margin:auto;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-area img{
+  width:60px;
+  height:60px;
+}
+
+.logo-area h1{
+  font-size:22px;
+}
+
+.logo-area p{
+  font-size:13px;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav{
+  margin-top:15px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+nav ul li{
+  position:relative;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:10px;
+  display:block;
+}
+
+nav ul li a:hover{
+  background:white;
+  color:#0b6b3a;
+  border-radius:5px;
+}
+
+/* ===== DROPDOWN ===== */
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:white;
+  min-width:220px;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.dropdown-content a{
+  color:#333;
+}
+
+.dropdown:hover .dropdown-content{
+ 
