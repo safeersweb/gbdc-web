@@ -45,6 +45,12 @@ header{
 .logo-area p{
   font-size:13px;
 }
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
 
 /* ===== NAVIGATION ===== */
 
