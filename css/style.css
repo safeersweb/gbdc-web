@@ -193,3 +193,20 @@ body {
     display: flex;
   }
 }
+/* Mobile Dropdown Menu Fix */
+.dropdown-content {
+  display: none; /* Submenu default me hide rahega */
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+/* Jab Class 'show' active ho tabhi open ho */
+.dropdown-content.show {
+  display: block !important;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
