@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check Results - Govt Boys Degree College, Dera Allah Yar</title>
+  <title>Results - Govt Boys Degree College, Dera Allah Yar</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     .results-wrapper {
@@ -12,7 +12,8 @@
       padding: 0 15px;
     }
 
-    .results-container {
+    /* Common Card Styling */
+    .results-card {
       background: #ffffff;
       padding: 25px;
       border-radius: 12px;
@@ -20,14 +21,14 @@
       margin-bottom: 25px;
     }
 
-    .results-container h2 {
+    .results-card h2, .results-card h3 {
       text-align: center;
       color: #0b6b3a;
       margin-top: 0;
       margin-bottom: 20px;
-      font-size: 1.4rem;
     }
 
+    /* 1. Form Inputs */
     .form-group {
       margin-bottom: 15px;
     }
@@ -63,26 +64,16 @@
       margin-top: 10px;
     }
 
-    /* PDF Section Styling */
-    .pdf-section {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      text-align: center;
+    #result-display {
+      margin-top: 20px;
+      display: none;
     }
 
-    .pdf-section h3 {
-      margin-top: 0;
-      color: #0b6b3a;
-      font-size: 1.2rem;
-    }
-
+    /* 2. PDF Gazette Buttons */
     .pdf-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: 15px;
     }
 
     .pdf-btn {
@@ -104,9 +95,51 @@
       background: #e8f5e9;
     }
 
-    #result-display {
+    /* 3. BBISE Board Card (At Bottom) */
+    .board-card {
+      border-top: 5px solid #0b6b3a;
+      text-align: center;
+    }
+
+    .board-card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .external-btn {
+      display: inline-block;
+      background-color: #0b6b3a;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(11, 107, 58, 0.25);
+    }
+
+    .external-btn:hover {
+      background-color: #064726;
+      transform: translateY(-2px);
+    }
+
+    .notice-box {
       margin-top: 20px;
-      display: none;
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      padding: 12px 15px;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 0.88rem;
+      color: #2e7d32;
+    }
+
+    .notice-box ul {
+      margin: 8px 0 0 0;
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -140,9 +173,9 @@
 
   <div class="results-wrapper">
 
-    <!-- 1. ROLL NUMBER SEARCH BOX -->
-    <div class="results-container">
-      <h2>🔍 Online Result Search</h2>
+    <!-- SECTION 1: SEARCH BAR -->
+    <div class="results-card">
+      <h2>🔍 College Test & Internal Results</h2>
 
       <form id="resultForm" onsubmit="searchResult(event)">
         <div class="form-group">
@@ -175,31 +208,49 @@
         <button type="submit" class="search-btn">Search Result</button>
       </form>
 
-      <!-- Result Card Show Hoga Yahan -->
       <div id="result-display"></div>
     </div>
 
-    <!-- 2. PDF GAZETTE DOWNLOAD SECTION -->
-    <div class="pdf-section">
-      <h3>📄 Download Complete Result Gazette (PDF)</h3>
-      <p style="font-size:0.85rem; color:#666;">Agar aap poori class ka result dekhna chahte hain to PDF download karein:</p>
+    <!-- SECTION 2: DOWNLOAD GAZETTE -->
+    <div class="results-card">
+      <h3>📄 Download Class Result Gazette (PDF)</h3>
+      <p style="text-align:center; font-size:0.88rem; color:#666; margin-top:-10px; margin-bottom:15px;">
+        Poori class ka result file dekhne ya download karne ke liye niche click karein:
+      </p>
       
       <div class="pdf-list">
-        <!-- PDF Download Links (Images/PDFs Folder Path) -->
         <a href="pdf/fsc-medical-2026.pdf" download class="pdf-btn">
-          <span>📥 F.Sc Pre-Medical Gazette (2024-2026)</span>
+          <span>📥 F.Sc Pre-Medical Gazette</span>
           <span>Download PDF</span>
         </a>
 
         <a href="pdf/ics-2026.pdf" download class="pdf-btn">
-          <span>📥 ICS Class Gazette (2024-2026)</span>
+          <span>📥 ICS Class Gazette</span>
           <span>Download PDF</span>
         </a>
 
         <a href="pdf/fa-2026.pdf" download class="pdf-btn">
-          <span>📥 F.A Class Gazette (2024-2026)</span>
+          <span>📥 F.A Class Gazette</span>
           <span>Download PDF</span>
         </a>
+      </div>
+    </div>
+
+    <!-- SECTION 3: BBISE QUETTA BOARD LINK (AT THE END) -->
+    <div class="results-card board-card">
+      <h2 style="font-size: 1.3rem;">BISE Quetta HSSC Board Examination Results</h2>
+      <p>Board of Intermediate and Secondary Education (BISE) Quetta ke HSSC Annual & Supplementary Exam results check karne ke liye niche diye gaye button par click karein.</p>
+      
+      <a href="https://bbise.edu.pk/Result" target="_blank" class="external-btn">
+        🌐 Check BBISE Quetta HSSC Result
+      </a>
+
+      <div class="notice-box">
+        <strong>📌 Important Instructions:</strong>
+        <ul>
+          <li>BBISE portal par apna **Roll Number** aur **Class (HSSC / Inter)** select karke result check karein.</li>
+          <li>Original DMCs / Marksheets college office se announce hone ke baad milenge.</li>
+        </ul>
       </div>
     </div>
 
@@ -211,7 +262,7 @@
       navLinks.classList.toggle('active');
     }
 
-    // Sample Student Data Array
+    // Demo Data for Roll No Search
     const studentsData = [
       {
         rollNo: "101",
@@ -223,17 +274,6 @@
         obtainedMarks: 415,
         status: "Pass",
         grade: "A-1"
-      },
-      {
-        rollNo: "102",
-        program: "ICS",
-        session: "2024-2026",
-        name: "Muhammad Usman",
-        fatherName: "Tariq Mahmood",
-        totalMarks: 500,
-        obtainedMarks: 380,
-        status: "Pass",
-        grade: "A"
       }
     ];
 
