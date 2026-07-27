@@ -165,6 +165,13 @@
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#academics">Academics</a></li>
       <li><a href="results.html">Results</a></li>
+      <li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown(event)">Admissions ▾</a>
+  <ul id="admission-dropdown" class="dropdown-content">
+    <li><a href="intermediate.html">Intermediate</a></li>
+    <li><a href="undergraduate.html">Undergraduate</a></li>
+  </ul>
+</li>
       <li><a href="index.html#notices">Notices</a></li>
       <li><a href="index.html#downloads">Downloads</a></li>
       <li><a href="index.html#gallery">Gallery</a></li>
@@ -273,6 +280,12 @@
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('active');
     }
+// Admissions Dropdown Toggle Function
+function toggleDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('admission-dropdown');
+  dropdown.classList.toggle('show');
+}
 
     // Demo Data for Roll No Search
     const studentsData = [
