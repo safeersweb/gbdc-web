@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Results - Govt Boys Degree College, Dera Allah Yar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Results Search Section Styling */
+    .results-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .results-container h2 {
+      text-align: center;
+      color: #0b6b3a;
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    .form-group select:focus,
+    .form-group input:focus {
+      border-color: #0b6b3a;
+    }
+
+    .search-btn {
+      width: 100%;
+      background-color: #0b6b3a;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .search-btn:hover {
+      background-color: #064726;
+    }
+
+    /* Result Box Placeholder */
+    #result-display {
+      margin-top: 25px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top-header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="College Logo" class="header-logo">
+      <div class="college-title">
+        <h2>Govt Boys Degree College</h2>
+        <p>Dera Allah Yar, District Jaffarabad</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#academics">Academics</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="index.html#notices">Notices</a></li>
+      <li><a href="index.html#downloads">Downloads</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Results Search Form -->
+  <div class="results-container">
+    <h2>Search Examination Results</h2>
+
+    <form id="resultForm" onsubmit="searchResult(event)">
+      <!-- 1. Program -->
+      <div class="form-group">
+        <label for="program">Program / Class</label>
+        <select id="program" required>
+          <option value="">-- Select Program --</option>
+          <option value="FA">F.A (Arts)</option>
+          <option value="FSc-Pre-Medical">F.Sc (Pre-Medical)</option>
+          <option value="FSc-Pre-Engineering">F.Sc (Pre-Engineering)</option>
+          <option value="ICS">ICS (Computer Science)</option>
+          <option value="ADA">ADA (Associate Degree in Arts / B.A)</option>
+          <option value="ADC">ADC (Associate Degree in Commerce / B.Com)</option>
+          <option value="ADS">ADS (Associate Degree in Science / B.Sc)</option>
+        </select>
+      </div>
+
+      <!-- 2. Session -->
+      <div class="form-group">
+        <label for="session">Session</label>
+        <select id="session" required>
+          <option value="">-- Select Session --</option>
+          <option value="2025-2027">2025 - 2027</option>
+          <option value="2024-2026">2024 - 2026</option>
+          <option value="2023-2025">2023 - 2025</option>
+          <option value="2022-2024">2022 - 2024</option>
+        </select>
+      </div>
+
+      <!-- 3. Roll No -->
+      <div class="form-group">
+        <label for="rollNo">Roll Number</label>
+        <input type="text" id="rollNo" placeholder="e.g. 1024" required>
+      </div>
+
+      <!-- Search Button -->
+      <button type="submit" class="search-btn">Search Result</button>
+    </form>
+
+    <!-- Display Area for Results -->
+    <div id="result-display"></div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    function searchResult(e) {
+      e.preventDefault();
+      const program = document.getElementById('program').value;
+      const session = document.getElementById('session').value;
+      const rollNo = document.getElementById('rollNo').value;
+      const display = document.getElementById('result-display');
+
+      // Demo Response (Aap is par backend connect kar sakte hain ya PDF view ka link de sakte hain)
+      display.style.display = 'block';
+      display.style.backgroundColor = '#e8f5e9';
+      display.style.border = '1px solid #0b6b3a';
+      display.innerHTML = `<p style="color: #0b6b3a; margin:0; text-align:center;">
+        <strong>Searching...</strong><br> Program: ${program} | Session: ${session} | Roll No: ${rollNo}
+      </p>`;
+    }
+  </script>
+
+</body>
+</html>
