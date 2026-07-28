@@ -210,3 +210,72 @@ body {
   cursor: pointer;
 }
 
+/* White Header & Single Line Text Fix */
+.top-header {
+  background-color: #ffffff !important; /* Top header white background */
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.college-logo {
+  width: 55px; /* Perfect sizing for logo */
+  height: auto;
+  object-fit: contain;
+}
+
+.college-title-box {
+  color: #0b6b3a; /* Dark Green Text on White Background */
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 0.95rem; /* Reduced size so it fits mobile screens */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevents COLLEGE from wrapping to next line */
+}
+
+.big-letter {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #0b6b3a;
+}
+
+.sub-title {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+/* Very Small Mobile Screens Fix */
+@media (max-width: 380px) {
+  .main-title {
+    font-size: 0.8rem;
+  }
+  .big-letter {
+    font-size: 1.1rem;
+  }
+}
+
