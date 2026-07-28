@@ -345,3 +345,93 @@ body {
     font-size: 0.65rem;
   }
 }
+
+/* ===== Premium Dropdown ===== */
+
+.dropdown{
+
+position:relative;
+
+}
+
+.dropdown-content{
+
+display:none;
+
+position:absolute;
+
+top:100%;
+
+left:0;
+
+background:#fff;
+
+min-width:220px;
+
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+padding:8px 0;
+
+z-index:9999;
+
+}
+
+.dropdown-content li{
+
+list-style:none;
+
+}
+
+.dropdown-content li a{
+
+display:block;
+
+padding:12px 18px;
+
+color:#222 !important;
+
+text-decoration:none;
+
+font-weight:500;
+
+}
+
+.dropdown-content li a:hover{
+
+background:#0b6b3a;
+
+color:#fff !important;
+
+}
+
+.dropdown-content.show{
+
+display:block;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.dropdown-content{
+
+position:static;
+
+background:#0b6b3a;
+
+box-shadow:none;
+
+padding-left:15px;
+
+}
+
+.dropdown-content li a{
+
+color:#fff !important;
+
+}
+
+}
