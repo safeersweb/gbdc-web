@@ -278,4 +278,71 @@ body {
     font-size: 1.1rem;
   }
 }
+/* Desktop Left Alignment & Single Line Subtitle Fix */
+.top-header {
+  background-color: #ffffff !important;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important; /* Left Alignment for Desktop */
+  gap: 15px;
+  max-width: 100%; /* Spans across screen */
+  margin: 0 !important; /* Removes auto center margins */
+}
+
+.college-logo {
+  width: 55px;
+  height: auto;
+  object-fit: contain;
+}
+
+.college-title-box {
+  color: #0b6b3a;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-align: left !important;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.big-letter {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #0b6b3a;
+}
+
+/* Beautiful Single Line Location Style */
+.sub-title {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 1.2px;
+  color: #444444;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Mobile responsive font adjust */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 0.85rem;
+  }
+  .big-letter {
+    font-size: 1.1rem;
+  }
+  .sub-title {
+    font-size: 0.65rem;
+  }
+}
 
