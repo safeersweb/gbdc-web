@@ -856,3 +856,49 @@ line-height:1.8;
 margin-top:10px;
 
 }
+
+.social-links{
+
+text-align:center;
+
+margin:40px 0;
+
+}
+
+.social-links a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 28px;
+
+background:#1877F2;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.social-links a:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.social-links i{
+
+font-size:22px;
+
+}
