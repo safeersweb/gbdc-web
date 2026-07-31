@@ -113,6 +113,7 @@ SKYLINE
     background:#ffffff;
     line-height:0;
     overflow:hidden;
+    margin-bottom: -5px;
 }
 
 .footer-skyline img{
@@ -127,17 +128,19 @@ MAIN FOOTER
 .footer-main{
     background:linear-gradient(180deg,#0d2f1d 0%,#071710 100%);
     color:#ffffff;
-    padding:90px 0 80px;
+    padding:70px 0 55px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:60px;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:40px;
+    align-items:start;
 }
 
 .footer-col{
     position:relative;
+    min-width:0;
 }
 
 .footer-col:not(:last-child){
@@ -409,10 +412,11 @@ RESPONSIVE
         grid-template-columns:1fr;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+}
+    
     .affiliation-title{
         flex-direction:column;
         font-size:28px;
