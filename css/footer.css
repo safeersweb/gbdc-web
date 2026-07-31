@@ -133,8 +133,8 @@ MAIN FOOTER
 
 .footer-grid{
     display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:40px;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
     align-items:start;
 }
 
@@ -175,12 +175,12 @@ MAIN FOOTER
 
 .footer-col p{
     color:#d9d9d9;
-    line-height:1.8;
-    font-size:15px;
+    line-height:1.55;
+    font-size:16px;
 }
 
 .footer-about{
-    margin:22px 0;
+    margin:16px 0 20px;
 }
 
 .footer-email{
