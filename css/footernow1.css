@@ -352,3 +352,28 @@ ul {
         text-align: center !important;
     }
 }
+
+/* =====================================
+   REMOVE SKYLINE TOP & BOTTOM GAPS
+====================================== */
+
+/* 1. Skyline ke Upar ka Gap Kam Karein */
+.affiliation-section {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* 2. Skyline ke Upar & Neeche Se Extra Gaps Zero Karein */
+.footer-skyline {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important; /* Image ke neeche ka white gap khatam karne ke liye */
+    display: block !important;
+}
+
+.footer-skyline img {
+    display: block !important;
+    margin: 0 auto !important;
+    vertical-align: bottom !important; /* Inline image space removal */
+}
+
