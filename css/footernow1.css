@@ -354,27 +354,38 @@ ul {
 }
 
 /* =====================================
-   FIX SKYLINE FOR DESKTOP & MOBILE VIEWS
+   FIX SKYLINE GAP FOR DESKTOP & MOBILE
 ====================================== */
 
+/* 1. Affiliation Section Se Extra Space Zero */
 .affiliation-section {
-    padding-bottom: 10px !important;
+    padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
 
+/* 2. Skyline Container Ko Stretch / Fill Mode Par Set Karein */
 .footer-skyline {
     width: 100% !important;
+    height: 180px !important; /* Desktop site par Height Lock */
     margin: 0 !important;
     padding: 0 !important;
+    overflow: hidden !important;
+    display: block !important;
     line-height: 0 !important;
-    background: #ffffff;
 }
 
+/* 3. Image Ko Width + Height Fill Karne Par Crop Karein (No White Space) */
 .footer-skyline img {
     width: 100% !important;
-    height: auto !important;
-    max-height: 320px !important;
-    object-fit: contain !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Visual space zero kar ke box fill karega */
+    object-position: center bottom !important; /* Buildings baseline par hongi */
     display: block !important;
-    margin: 0 auto !important;
+}
+
+/* 4. Mobile Mode Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-skyline {
+        height: 120px !important; /* Mobile view ke liye height balance */
+    }
 }
