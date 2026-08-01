@@ -354,26 +354,33 @@ ul {
 }
 
 /* =====================================
-   REMOVE SKYLINE TOP & BOTTOM GAPS
+   REMOVE SKYLINE TOP & BOTTOM GAPS (UPDATED)
 ====================================== */
 
-/* 1. Skyline ke Upar ka Gap Kam Karein */
+/* 1. Affiliations section ke neeche ki space khatam */
 .affiliation-section {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
 
-/* 2. Skyline ke Upar & Neeche Se Extra Gaps Zero Karein */
+/* 2. Skyline container se white boundaries crop karein */
 .footer-skyline {
     margin: 0 !important;
     padding: 0 !important;
-    line-height: 0 !important; /* Image ke neeche ka white gap khatam karne ke liye */
+    width: 100% !important;
+    max-height: 160px !important; /* White space cut karne ke liye height limit */
+    overflow: hidden !important;   /* Extra top/bottom white hide ho jayega */
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 3. Image ko slightly zoom aur center alignment */
+.footer-skyline img {
+    width: 100% !important;
+    height: 260px !important;      /* Zoom effect taaki white padding bahar nikal jaye */
+    object-fit: cover !important;
+    object-position: center !important;
     display: block !important;
 }
 
-.footer-skyline img {
-    display: block !important;
-    margin: 0 auto !important;
-    vertical-align: bottom !important; /* Inline image space removal */
-}
 
