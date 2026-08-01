@@ -1,0 +1,371 @@
+/*=================================================
+GBDC PREMIUM FOOTER CSS - UPDATED & FIXED
+=================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ffffff;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+/*==============================
+AFFILIATIONS SECTION
+==============================*/
+
+.affiliation-section {
+    padding: 50px 0 40px;
+    background: #f8faf9;
+}
+
+.affiliation-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2216;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.affiliation-title span {
+    width: 40px;
+    height: 3px;
+    background: #25d366;
+    border-radius: 10px;
+}
+
+.affiliation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.affiliation-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f0;
+    transition: all .35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.affiliation-card img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.affiliation-card h3 {
+    font-size: 15px;
+    color: #111111;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/*==============================
+MAIN FOOTER
+==============================*/
+
+.footer-main {
+    background: #061e14;
+    color: #ffffff;
+    padding: 60px 0 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col {
+    position: relative;
+}
+
+.footer-col:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding-right: 25px;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: auto;
+}
+
+.brand-titles h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.brand-titles h3 {
+    color: #4ade80;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.brand-titles p {
+    color: #9cb3a8;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.footer-about {
+    color: #a3b8ad;
+    line-height: 1.6;
+    font-size: 13.5px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-email i {
+    color: #4ade80;
+}
+
+/*====================================
+LINKS & ADMISSIONS SECTIONS
+====================================*/
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #a3b8ad;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: all .25s ease;
+}
+
+/* Reference image exact style arrows '>' */
+.footer-col ul.quick-links li a::before {
+    content: "›";
+    color: #4ade80;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-col ul li a:hover {
+    color: #4ade80;
+    transform: translateX(4px);
+}
+
+/* Icon list layout for Admissions */
+.footer-col ul.icon-links li a i {
+    color: #4ade80;
+    margin-right: 12px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/*====================================
+FOLLOW US / SOCIAL
+====================================*/
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.social-icon-btn.facebook { background: #1877f2; }
+.social-icon-btn.gmail { background: #ea4335; }
+.social-icon-btn.maps { background: #34a853; }
+
+.social-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-details strong {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.social-details a {
+    color: #a3b8ad;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.social-details a:hover {
+    color: #4ade80;
+}
+
+/*====================================
+BOTTOM FOOTER BAR
+====================================*/
+
+.footer-bottom {
+    background: #04140d;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 0;
+}
+
+.bottom-container {
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #8fa69a;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Correct green color highlight for Safeer Ahmed */
+.developer {
+    text-align: right;
+    color: #8fa69a;
+}
+
+.developer .dev-name {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/*====================================
+RESPONSIVE SETTINGS
+====================================*/
+
+@media (max-width: 1024px) {
+    .affiliation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-col:not(:last-child) {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .affiliation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .developer {
+        text-align: center;
+    }
+}
