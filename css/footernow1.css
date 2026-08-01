@@ -311,3 +311,44 @@ ul {
     color: #25d366;
     font-weight: 700;
 }
+
+/* =====================================
+   FIX FOR MOBILE SCREEN RESPONSIVENESS
+====================================== */
+
+/* Mobile Screen Layout (1 Column per row) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Affiliation logos mobile par 2x2 grid mein aayein */
+    .affiliation-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    /* 2. Footer elements overlap hone ki bajaye ek ke neeche ek aayein */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    /* 3. Columns ke beech vertical border remove karein */
+    .footer-col:not(:last-child) {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding-right: 0 !important;
+        padding-bottom: 25px !important;
+    }
+
+    /* 4. Text wrap enable karein taaki overflow na ho */
+    .footer-col ul li a,
+    .social-details a {
+        white-space: normal !important;
+    }
+
+    /* 5. Bottom bar layout on Mobile */
+    .bottom-container {
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: center !important;
+    }
+}
