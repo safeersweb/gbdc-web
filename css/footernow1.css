@@ -368,7 +368,7 @@ ul {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    max-height: 120px !important; /* White space cut karne ke liye height limit */
+    max-height: 125px !important; /* White space cut karne ke liye height limit */
     overflow: hidden !important;   /* Extra top/bottom white hide ho jayega */
     display: flex !important;
     align-items: center !important;
