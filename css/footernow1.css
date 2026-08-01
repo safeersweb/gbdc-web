@@ -377,7 +377,7 @@ ul {
 /* 3. Image ko slightly zoom aur center alignment */
 .footer-skyline img {
     width: 100% !important;
-    height: 260px !important;      /* Zoom effect taaki white padding bahar nikal jaye */
+    height: 240px !important;      /* Zoom effect taaki white padding bahar nikal jaye */
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
