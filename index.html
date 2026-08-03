@@ -1,99 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Government Boys Degree College, Dera Allah Yar</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Admissions | Government Boys Degree College</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Intermediate CSS -->
+    <link rel="stylesheet" href="css/intermediate.css">
+
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="css/footernow1.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-  <!-- Top Header -->
-<header class="top-header">
-  <div class="header-container">
-    <img src="images/logo.png" alt="College Logo" class="college-logo">
-    <div class="college-title-box">
-      <h1 class="main-title">
-        <span class="big-letter">G</span>OVT BOYS DEGREE COLLEGE
-      </h1>
-      <p class="sub-title">DERA ALLAH YAR, DISTRICT JAFFARABAD</p>
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="loader-circle"></div>
+</div>
+
+<!-- Top Notice -->
+<div class="notice-bar">
+    <marquee behavior="scroll" direction="left">
+        📢 Admissions are Open for Intermediate Session 2026 • All FSc applicants must first apply through the Official CHTE Balochistan Admission Portal • https://portal.chte.gob.pk/
+    </marquee>
+</div>
+
+<!-- Header (Times University Style) -->
+<header class="header-banner">
+    <div class="header-container">
+        <a href="index.html" class="brand-link">
+            <!-- College Logo -->
+            <img src="images/logo.png" 
+                 alt="Government Boys Degree College Logo" 
+                 class="header-logo" 
+                 style="margin-left: 12px;">
+            
+            <!-- College Title Box -->
+            <div class="header-title">
+                <h1 class="main-name">GOVERNMENT BOYS DEGREE COLLEGE</h1>
+                <div class="sub-name">
+                    <span class="line"></span>
+                    <span class="location-text">DERA ALLAH YAR, JAFFARABAD</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </a>
     </div>
-  </div>
 </header>
 
-  <!-- Navigation Bar -->
-  <nav class="main-nav">
-    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+<!-- Navigation -->
+<nav class="main-nav" id="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">
+        ☰ Menu
+    </button>
+
     <ul id="nav-links" class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#academics">Academics</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown(event)">Admissions ▾</a>
-  <ul id="admission-dropdown" class="dropdown-content">
-    <li><a href="intermediate.html">Intermediate</a></li>
-<li><a href="adp.html">ADP Programs</a></li>
-  </ul>
-</li>
-      <li><a href="#notices">Notices</a></li>
-      <li><a href="#downloads">Downloads</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#academics">Academics</a></li>
+        <li><a href="results.html">Results</a></li>
+
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown(event)">
+                Admissions ▾
+            </a>
+            <ul id="admission-dropdown" class="dropdown-content">
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="adp.html">ADP Programs</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#downloads">Downloads</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
     </ul>
-  </nav>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <p class="welcome-text">Welcome to</p>
-      <h1>Govt Boys Degree College<br><span>Dera Allah Yar</span></h1>
-      <p class="hero-desc">
-        A premier educational institution committed to academic excellence, character building, and holistic development of students.
-      </p>
-      <div class="hero-buttons">
-        <a href="#admissions" class="btn btn-primary">Apply Now →</a>
-        <a href="#about" class="btn btn-secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="hero-bg">
+    <div class="hero-overlay">
+        <p class="hero-tag">WELCOME TO</p>
+        <h1 class="hero-title">Intermediate Admissions <span>2026</span></h1>
+        <p class="hero-description">
+            Government Boys Degree College, Dera Allah Yar invites eligible students to apply for admission in FA, FSc Pre-Medical, FSc Pre-Engineering and ICS programmes.
+        </p>
 
-  <!-- Quick Feature Cards -->
-  <section class="quick-cards">
-    <div class="card">
-      <div class="card-icon">📋</div>
-      <h3>Test Results</h3>
-      <p>Check midterm & exam results</p>
+        <div class="hero-buttons">
+            <a href="https://portal.chte.gob.pk/" target="_blank" class="btn btn-primary">
+                <i class="fa-solid fa-user-graduate"></i> Apply Online
+            </a>
+            <a href="#programmes" class="btn btn-secondary">
+                <i class="fa-solid fa-book-open"></i> Explore Programmes
+            </a>
+        </div>
     </div>
-    <div class="card">
-      <div class="card-icon">🎓</div>
-      <h3>Admissions</h3>
-      <p>Apply for Intermediate & Undergraduate</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">📢</div>
-      <h3>Notice Board</h3>
-      <p>Latest news & announcements</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">📥</div>
-      <h3>Downloads</h3>
-      <p>Forms, Prospectus & Syllabus</p>
-    </div>
-  </section>
+</section>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('active');
-    }
-      // Admissions Dropdown Toggle Function
-  function toggleDropdown(event) {
-    event.stopPropagation();
-    const dropdown = document.getElementById('admission-dropdown');
-    dropdown.classList.toggle('show');
-  }
+<!-- Quick Actions -->
+<section class="quick-actions">
+    <div class="action-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Official Portal</h3>
+        <p>Apply online through CHTE Balochistan Portal.</p>
+    </div>
 
-  </script>
+    <div class="action-card">
+        <i class="fa-solid fa-file-lines"></i>
+        <h3>Required Documents</h3>
+        <p>Check the list before visiting the college.</p>
+    </div>
+
+    <div class="action-card">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Admission Schedule</h3>
+        <p>Stay updated with important dates.</p>
+    </div>
+
+    <div class="action-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Admission Help</h3>
+        <p>Visit the college for guidance and support.</p>
+    </div>
+</section>
+
+<!-- Programmes Section -->
+<section id="programmes" class="programmes-section">
+    <div class="section-heading">
+        <span>Academic Programmes</span>
+        <h2>Intermediate Programmes Offered</h2>
+        <p>Choose the programme that matches your academic goals.</p>
+    </div>
+
+    <div class="programme-grid">
+        <div class="programme-card">
+            <div class="programme-icon">🎨</div>
+            <h3>FA (Arts)</h3>
+            <p>A two-year programme designed for students interested in Humanities and Social Sciences.</p>
+            <ul>
+                <li>Duration: 2 Years</li>
+                <li>Eligibility: Matriculation</li>
+                <li>Merit Based Admission</li>
+            </ul>
+        </div>
+
+        <div class="programme-card">
+            <div class="programme-icon">🩺</div>
+            <h3>FSc Pre-Medical</h3>
+            <p>For students planning careers in Medicine, Pharmacy and Allied Health Sciences.</p>
+            <ul>
+                <li>Duration: 2 Years</li>
+                <li>Eligibility: Matric (Science)</li>
+                <li>Merit Based Admission</li>
+            </ul>
+        </div>
+
+        <div class="programme-card">
+            <div class="programme-icon">⚙️</div>
+            <h3>FSc Pre-Engineering</h3>
+            <p>Designed for students aiming for Engineering, Technology and related fields.</p>
+            <ul>
+                <li>Duration: 2 Years</li>
+                <li>Eligibility: Matric (Science)</li>
+                <li>Merit Based Admission</li>
+            </ul>
+        </div>
+
+        <div class="programme-card">
+            <div class="programme-icon">💻</div>
+            <h3>ICS</h3>
+            <p>Ideal for students interested in Computer Science, Software and Information Technology.</p>
+            <ul>
+                <li>Duration: 2 Years</li>
+                <li>Eligibility: Matric</li>
+                <li>Merit Based Admission</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Admission Schedule -->
+<section class="schedule-section">
+    <div class="section-heading">
+        <span>Admission Schedule</span>
+        <h2>Important Dates</h2>
+    </div>
+
+    <table class="schedule-table">
+        <tr>
+            <th>Activity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Online Applications</td>
+            <td>Open</td>
+        </tr>
+        <tr>
+            <td>Merit List</td>
+            <td>To Be Announced</td>
+        </tr>
+        <tr>
+            <td>Document Verification</td>
+            <td>After Merit List</td>
+        </tr>
+        <tr>
+            <td>Commencement of Classes</td>
+            <td>To Be Announced</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Admission Process -->
+<section class="timeline-section">
+    <div class="section-heading">
+        <span>Admission Process</span>
+        <h2>How to Apply</h2>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div>
+                <h3>Visit Official Portal</h3>
+                <p>Open the official CHTE Balochistan Admission Portal.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div>
+                <h3>Submit Online Application</h3>
+                <p>Complete your online application carefully.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div>
+                <h3>Select Your Programme</h3>
+                <p>Choose Government Boys Degree College, Dera Allah Yar and your desired programme.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">4</div>
+            <div>
+                <h3>Merit List</h3>
+                <p>Wait for the official merit list announcement.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">5</div>
+            <div>
+                <h3>Admission Confirmation</h3>
+                <p>Visit the college with original documents and complete your admission.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Required Documents -->
+<section class="documents-section">
+    <div class="section-heading">
+        <span>Documents</span>
+        <h2>Required Documents</h2>
+        <p>Please bring the following documents at the time of admission.</p>
+    </div>
+
+    <div class="document-grid">
+        <div class="document-card">
+            <div class="doc-icon"><i class="fa-solid fa-file-lines"></i></div>
+            <h3>Matric Mark Sheet</h3>
+            <p>Original and photocopy.</p>
+        </div>
+
+        <div class="document-card">
+            <div class="doc-icon"><i class="fa-solid fa-id-card"></i></div>
+            <h3>B-Form / CNIC</h3>
+            <p>Original and photocopy.</p>
+        </div>
+
+        <div class="document-card">
+            <div class="doc-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>Photographs</h3>
+            <p>Recent passport-size photographs.</p>
+        </div>
+
+        <div class="document-card">
+            <div class="doc-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Character Certificate</h3>
+            <p>From the last attended institution.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Important Instructions -->
+<section class="important-section">
+    <div class="important-box">
+        <h2>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            Important Instructions
+        </h2>
+
+        <ul>
+            <li>Admissions are strictly on merit.</li>
+            <li>Applicants must first apply through the official CHTE Admission Portal.</li>
+            <li>Incomplete applications will not be considered.</li>
+            <li>Original documents must be produced during verification.</li>
+            <li>The college reserves the right to accept or reject any application according to Government rules.</li>
+        </ul>
+
+        <a href="https://portal.chte.gob.pk/" target="_blank" class="btn btn-primary">
+            Apply Through Official Portal
+        </a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="section-heading">
+        <span>Admission Office</span>
+        <h2>Need Assistance?</h2>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>Government Boys Degree College<br>Dera Allah Yar,<br>District Jaffarabad, Balochistan</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Office Hours</h3>
+            <p>Monday – Friday<br>09:00 AM – 02:00 PM</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>gbdcday@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Floating Buttons -->
+<a href="https://portal.chte.gob.pk/" target="_blank" class="floating-apply">
+    <i class="fa-solid fa-paper-plane"></i> Apply Now
+</a>
+
+<button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- MAIN FOOTER SECTION (PROPERLY OUTSIDE CONTACT) -->
+<div class="footer-wrapper">
+
+    <!-- AFFILIATIONS & RECOGNITION SECTION -->
+    <section class="affiliation-section">
+        <div class="container">
+            <h2 class="affiliation-title">
+                <span></span> AFFILIATIONS & RECOGNITION <span></span>
+            </h2>
+            <div class="affiliation-grid">
+                <div class="affiliation-card">
+                    <img src="images/gob.png" alt="Government of Balochistan">
+                </div>
+                <div class="affiliation-card">
+                    <img src="images/directorate.jpg" alt="Directorate of Colleges & Higher Education Quetta">
+                </div>
+                <div class="affiliation-card">
+                    <img src="images/uob.png" alt="Uob">
+                </div>
+                <div class="affiliation-card">
+                    <img src="images/bbise.png" alt="BBISE Quetta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLEGE SKYLINE IMAGE -->
+    <div class="footer-skyline">
+        <img src="images/college-skyline.png" alt="College Campus Skyline">
+    </div>
+
+    <!-- MAIN FOOTER CONTENT -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- COL 1: BRAND INFO -->
+                <div class="footer-col brand-col">
+                    <div class="brand-header">
+                        <div class="brand-titles">
+                            <h2>GOVERNMENT BOYS DEGREE COLLEGE</h2>
+                            <h3>Dera Allah Yar, Jaffarabad<span class="state-tag"><em>Balochistan</em></span></h3>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        Dedicated to providing quality education, character building and creating future leaders for the progress of our society and nation.
+                    </p>
+                </div>
+
+                <!-- COL 2: QUICK LINKS -->
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#academics">Academics</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="intermediate.html">Admissions</a></li>
+                        <li><a href="index.html#downloads">Downloads</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- COL 3: ADMISSIONS -->
+                <div class="footer-col">
+                    <h4>ADMISSIONS</h4>
+                    <ul class="icon-links">
+                        <li><a href="intermediate.html"><i class="fa-solid fa-graduation-cap"></i> Intermediate Admissions</a></li>
+                        <li><a href="adp.html"><i class="fa-solid fa-book-open"></i> ADP Admissions</a></li>
+                        <li><a href="https://portal.chte.gob.pk/" target="_blank"><i class="fa-solid fa-pen-to-square"></i> Apply Online</a></li>
+                        <li><a href="https://portal.chte.gob.pk/" target="_blank"><i class="fa-solid fa-globe"></i> Official CHTE Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- COL 4: FOLLOW US -->
+                <div class="footer-col">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <div class="social-item">
+                            <div class="social-icon-btn facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="social-details">
+                                <strong>Facebook</strong>
+                                <a href="https://facebook.com/gbdcday" target="_blank">/gbdcday</a>
+                            </div>
+                        </div>
+
+                        <div class="social-item">
+                            <div class="social-icon-btn gmail">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="social-details">
+                                <strong>Gmail</strong>
+                                <a href="mailto:gbdcday@gmail.com">gbdcday@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="social-item">
+                            <div class="social-icon-btn maps">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="social-details">
+                                <strong>Google Maps</strong>
+                                <a href="#" target="_blank">College Location</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTTOM FOOTER BAR -->
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <div class="copyright">
+                © 2026 Government Boys Degree College, Dera Allah Yar, District Jaffarabad. All Rights Reserved.
+            </div>
+            <div class="developer">
+                Designed & Developed by <span class="dev-name">Safeer Ahmed</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/intermediate.js"></script>
+
 </body>
 </html>
