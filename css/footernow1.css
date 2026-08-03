@@ -359,7 +359,7 @@ ul {
 
 /* 1. Skyline image ke neeche se gap push kar ke cover karein */
 .footer-skyline {
-    margin-bottom: -40px !important; /* Visual path ko neeche se pull karega */
+    margin-bottom: -60px !important; /* Visual path ko neeche se pull karega */
     position: relative;
     z-index: 1;
 }
