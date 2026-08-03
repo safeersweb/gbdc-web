@@ -36,8 +36,9 @@ ul {
    AFFILIATIONS & RECOGNITION
 ====================================== */
 .affiliation-section {
-    padding: 40px 0 30px;
+    padding: 35px 0 15px !important;
     background: #ffffff;
+    margin-bottom: 0 !important;
 }
 
 .affiliation-title {
@@ -45,7 +46,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 20px;
     font-weight: 700;
     color: #0b2216;
@@ -63,7 +64,7 @@ ul {
 
 .affiliation-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
@@ -95,39 +96,45 @@ ul {
 }
 
 /* =====================================
-   SKYLINE IMAGE
+   SKYLINE IMAGE (NATURAL FULL-WIDTH)
 ====================================== */
 .footer-skyline {
-    width: 100%;
-    line-height: 0;
-    background: #ffffff;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
 }
 
 .footer-skyline img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 /* =====================================
-   MAIN FOOTER (4-COLUMN STRICT GRID)
+   MAIN FOOTER (4-COLUMN GRID)
 ====================================== */
 .footer-main {
     background: #052014;
     color: #ffffff;
-    padding: 50px 0 40px;
+    padding: 45px 0 40px;
 }
 
-/* Force 4 columns in one single row */
 .footer-grid {
-    display: grid !important;
-    grid-template-columns: 1.4fr 1fr 1.1fr 1fr !important;
-    gap: 20px !important;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
+    gap: 20px;
 }
 
 .footer-col {
     position: relative;
-    min-width: 0; /* Prevents overflow grid breakage */
+    min-width: 0;
 }
 
 .footer-col:not(:last-child) {
@@ -313,25 +320,20 @@ ul {
 }
 
 /* =====================================
-   FIX FOR MOBILE SCREEN RESPONSIVENESS
+   RESPONSIVE MEDIA QUERIES (MOBILE ONLY)
 ====================================== */
-
-/* Mobile Screen Layout (1 Column per row) */
 @media screen and (max-width: 768px) {
     
-    /* 1. Affiliation logos mobile par 2x2 grid mein aayein */
     .affiliation-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px !important;
     }
 
-    /* 2. Footer elements overlap hone ki bajaye ek ke neeche ek aayein */
     .footer-grid {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
     }
 
-    /* 3. Columns ke beech vertical border remove karein */
     .footer-col:not(:last-child) {
         border-right: none !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -339,53 +341,14 @@ ul {
         padding-bottom: 25px !important;
     }
 
-    /* 4. Text wrap enable karein taaki overflow na ho */
     .footer-col ul li a,
     .social-details a {
         white-space: normal !important;
     }
 
-    /* 5. Bottom bar layout on Mobile */
     .bottom-container {
         flex-direction: column !important;
         gap: 12px !important;
         text-align: center !important;
-    }
-}
-
-/* =====================================
-   FIX SKYLINE GAP FOR DESKTOP & MOBILE
-====================================== */
-
-/* 1. Affiliation Section Se Extra Space Zero */
-.affiliation-section {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* 2. Skyline Container Ko Stretch / Fill Mode Par Set Karein */
-.footer-skyline {
-    width: 100% !important;
-    height: 180px !important; /* Desktop site par Height Lock */
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    display: block !important;
-    line-height: 0 !important;
-}
-
-/* 3. Image Ko Width + Height Fill Karne Par Crop Karein (No White Space) */
-.footer-skyline img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Visual space zero kar ke box fill karega */
-    object-position: center bottom !important; /* Buildings baseline par hongi */
-    display: block !important;
-}
-
-/* 4. Mobile Mode Adjustments */
-@media screen and (max-width: 768px) {
-    .footer-skyline {
-        height: 120px !important; /* Mobile view ke liye height balance */
     }
 }
