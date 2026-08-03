@@ -904,14 +904,15 @@ font-size:22px;
 }
 
 /* =========================================================
-   PREMIUM HEADER BANNER (TIMES UNIVERSITY INSTITUTIONAL STYLE)
+   PREMIUM LIGHT HEADER BANNER (OFF-WHITE / MINT ACCENT)
 ============================================================ */
 
 .header-banner {
-    background: #052014; /* Deep Government Green Background */
-    padding: 14px 0;
-    border-bottom: 2px solid #25d366; /* Vibrant menu accent border */
+    background: #f8faf9; /* Soft Premium Off-White */
+    padding: 12px 0;
+    border-bottom: 3px solid #052014; /* Menu Green Border Baseline */
     width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .header-container {
@@ -929,12 +930,13 @@ font-size:22px;
     text-decoration: none;
 }
 
-/* College Logo */
+/* College Logo Clear Visibility */
 .header-logo {
     height: 65px;
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)); /* Logo Outline Highlight */
 }
 
 /* Title Box */
@@ -944,19 +946,19 @@ font-size:22px;
     justify-content: center;
 }
 
-/* Main Heading */
+/* Main Heading (Dark Forest Green Text) */
 .main-name {
-    color: #ffffff;
+    color: #052014; /* Deep Institutional Green */
     font-size: 19px;
     font-weight: 800;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.6px;
     line-height: 1.15;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     margin: 0;
 }
 
-/* Subtitle & Lines */
+/* Subtitle & Accent Lines */
 .sub-name {
     display: flex;
     align-items: center;
@@ -965,19 +967,19 @@ font-size:22px;
 }
 
 .sub-name .location-text {
-    color: #25d366; /* Menu Green Accent */
+    color: #127542; /* Medium Green Text */
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
     white-space: nowrap;
     text-transform: uppercase;
 }
 
-/* Side Horizontal Lines */
+/* Side Lines in Light Theme */
 .sub-name .line {
     flex-grow: 1;
     height: 1px;
-    background: rgba(255, 255, 255, 0.35);
+    background: #c2d8cc; /* Soft Green-Grey Line */
     min-width: 18px;
 }
 
@@ -994,12 +996,12 @@ font-size:22px;
     }
 
     .header-logo {
-        height: 48px;
+        height: 50px;
     }
 
     .main-name {
         font-size: 13.5px;
-        letter-spacing: 0.4px;
+        letter-spacing: 0.3px;
     }
 
     .sub-name {
@@ -1016,3 +1018,5 @@ font-size:22px;
         min-width: 10px;
     }
 }
+
+   
