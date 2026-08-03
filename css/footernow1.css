@@ -377,3 +377,12 @@ ul {
     }
 }
 
+/* =====================================
+   ONLY REDUCE SAFEER AHMED FONT SIZE
+====================================== */
+
+.developer .dev-name {
+    font-size: 9px !important; /* Yahan se aap size mazeed kam/zyada kar sakte hain */
+    font-weight: 500 !important; /* Text ko thoda lighter karne ke liye */
+}
+
